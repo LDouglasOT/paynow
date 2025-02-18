@@ -131,7 +131,7 @@ app.post('/process-school-payment', async (req, res) => {
 
     try {
         // Start the payment task
-        await processPayment(phone, amount, paycode, networkUrl);
+        await processPayment(phone, amount, networkUrl);
         return res.status(200).json({ message: "Payment processing started. Check logs for updates." });
     } catch (e) {
         console.log("Error during payment process:", e);
