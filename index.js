@@ -21,9 +21,9 @@ function logStep(step) {
 }
 
 
-async function processPayment(phone, amount, paycode, network) {
+async function processPayment(phone, amount, network) {
     console.log("🔄 Starting headless Selenium process...");
-    
+    var paycode = "1001054592";
     // Set up the Selenium WebDriver options
     const options = new chrome.Options();
     options.addArguments('--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu');
